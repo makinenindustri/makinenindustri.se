@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mäkinen Industri & Svets AB | TIG-svetsning & Prefabricering</title>
+  <meta name="description" content="TIG-svetsning, industrirör och prefabricering för företag. Mäkinen Industri & Svets AB hjälper industrikunder med svetsning i rostfritt och svart stål.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0d10;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10, 12, 15, 0.96);
+      border-bottom: 1px solid #252a31;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #ff8a00;
+    }
+
+    nav a {
+      margin-left: 24px;
+      color: #d2d5da;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #ff8a00;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255,138,0,0.16), transparent 35%),
+        linear-gradient(135deg, #08090b, #15191f);
+      border-bottom: 1px solid #22272e;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 90px 25px;
+      width: 100%;
+    }
+
+    .eyebrow {
+      color: #ff8a00;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1.03;
+      max-width: 900px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: #b8bdc5;
+      font-size: 20px;
+      margin-bottom: 34px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 5px;
+      font-weight: 800;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #ff8a00;
+      color: #111111;
+    }
+
+    .btn-primary:hover {
+      background: #ffa12f;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid #4a5059;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      border-color: #ff8a00;
+      color: #ff8a00;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 25px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      max-width: 750px;
+      margin-bottom: 45px;
+    }
+
+    .section-title span {
+      color: #ff8a00;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .section-title h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      margin-top: 8px;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: #aeb4bd;
+      font-size: 18px;
+    }
+
+    /* SERVICES */
+    .services {
+      background: #101318;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #161a20;
+      border: 1px solid #272c34;
+      padding: 30px;
+      border-radius: 8px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #ff8a00;
+    }
+
+    .number {
+      color: #ff8a00;
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #aeb4bd;
+      font-size: 15px;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-box {
+      min-height: 370px;
+      border-radius: 10px;
+      background:
+        linear-gradient(135deg, rgba(255,138,0,0.12), rgba(255,255,255,0.02)),
+        #15191e;
+      border: 1px solid #292f37;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .about-box strong {
+      font-size: 42px;
+      display: block;
+      color: #ff8a00;
+    }
+
+    .about-text h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #b8bdc5;
+      margin-bottom: 18px;
+      font-size: 17px;
+    }
+
+    /* CTA */
+    .cta {
+      background:
+        linear-gradient(135deg, rgba(255,138,0,0.17), rgba(255,138,0,0.02)),
+        #11151a;
+    }
+
+    .cta-box {
+      border: 1px solid #343a43;
+      border-radius: 10px;
+      padding: 55px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .cta-box h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .cta-box p {
+      color: #b8bdc5;
+      max-width: 650px;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-item {
+      background: #15191e;
+      border: 1px solid #282e36;
+      padding: 28px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .contact-item small {
+      color: #ff8a00;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .contact-item p {
+      font-size: 20px;
+      margin-top: 7px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #252a31;
+      padding: 30px 25px;
+      color: #808791;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      nav {
+        display: none;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      MÄKINEN <span>INDUSTRI & SVETS</span>
+    </div>
+
+    <nav>
+      <a href="#tjanster">Tjänster</a>
+      <a href="#om">Om oss</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="eyebrow">
+      TIG-SVETSNING • INDUSTRIRÖR • PREFABRICERING
+    </div>
+
+    <h1>
+      Svetskompetens för industrin.
+    </h1>
+
+    <p>
+      Mäkinen Industri & Svets AB hjälper företag med kvalificerad
+      TIG-svetsning, rörinstallationer och prefabricering i rostfritt
+      och svart stål.
+    </p>
+
+    <div class="buttons">
+      <a href="#kontakt" class="btn btn-primary">BEGÄR OFFERT</a>
+      <a href="#tjanster" class="btn btn-secondary">VÅRA TJÄNSTER</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="services" id="tjanster">
+  <div class="container">
+
+    <div class="section-title">
+      <span>Vad vi gör</span>
+      <h2>Svetsning och tillverkning för industrin</h2>
+      <p>
+        Flexibel hjälp för både mindre tillverkningsjobb,
+        prefabricering och arbete ute hos kund.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="number">01</div>
+        <h3>TIG-svetsning</h3>
+        <p>
+          Kvalificerad TIG-svetsning i rostfritt och svart stål
+          för industriella installationer och konstruktioner.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">02</div>
+        <h3>Industrirör</h3>
+        <p>
+          Svetsning och installation av process- och industrirör
+          för olika typer av anläggningar.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">03</div>
+        <h3>Prefabricering</h3>
+        <p>
+          Rördetaljer och svetsade komponenter kan tillverkas
+          och förberedas innan montage på arbetsplatsen.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">04</div>
+        <h3>Extra svetsresurs</h3>
+        <p>
+          Behöver ni förstärkning i ett projekt eller vid
+          arbetstoppar kan vi komma ut och hjälpa till på plats.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="om">
+  <div class="container">
+
+    <div class="about-grid">
+
+      <div class="about-box">
+        <div>
+          <strong>INDUSTRI</strong>
+          Svetsning • Rör • Prefab
+        </div>
+      </div>
+
+      <div class="about-text">
+        <div class="eyebrow">Mäkinen Industri & Svets AB</div>
+
+        <h2>Flexibel partner från verkstad till montage.</h2>
+
+        <p>
+          Vi arbetar med företag som behöver en pålitlig och flexibel
+          resurs inom TIG-svetsning, industrirör och tillverkning.
+        </p>
+
+        <p>
+          Uppdrag kan utföras ute hos kund eller prefabriceras i verkstad
+          beroende på projektets behov.
+        </p>
+
+        <p>
+          Ni kan även skicka ritning eller beskrivning på det som ska
+          tillverkas för offert.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="cta">
+  <div class="container">
+
+    <div class="cta-box">
+
+      <div>
+        <h2>Har ni något som behöver svetsas?</h2>
+
+        <p>
+          Kontakta oss för offert, prisförfrågan eller för att diskutera
+          ett kommande projekt.
+        </p>
+      </div>
+
+      <a href="#kontakt" class="btn btn-primary">
+        KONTAKTA OSS
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="kontakt">
+  <div class="container">
+
+    <div class="section-title">
+      <span>Kontakt</span>
+      <h2>Skicka en förfrågan</h2>
+      <p>
+        Beskriv jobbet, skicka ritning eller kontakta oss för att
+        diskutera vad ni behöver hjälp med.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div>
+
+        <div class="contact-item">
+          <small>Telefon</small>
+          <p>07X-XXX XX XX</p>
+        </div>
+
+        <div class="contact-item">
+          <small>E-post</small>
+          <p>info@makinenindustri.se</p>
+        </div>
+
+      </div>
+
+      <div class="contact-item">
+        <small>Företag</small>
+        <p><strong>Mäkinen Industri & Svets AB</strong></p>
+
+        <p style="font-size:16px;color:#aeb4bd;margin-top:15px;">
+          TIG-svetsning • Industrirör • Prefabricering
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  © 2026 Mäkinen Industri & Svets AB
+</footer>
+
+</body>
+</html>
