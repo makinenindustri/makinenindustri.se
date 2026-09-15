@@ -750,5 +750,30 @@
   © 2026 Mäkinen Industri & Svets AB
 </footer>
 
+<script>
+const offertForm = document.querySelector('form[action*="formspree.io"]');
+
+offertForm.addEventListener('submit', async function(event) {
+  event.preventDefault();
+
+  const formData = new FormData(offertForm);
+
+  const response = await fetch(offertForm.action, {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
+
+  if (response.ok) {
+    window.location.href = '/tack.html';
+  } else {
+    alert('Något gick fel. Försök igen eller kontakta oss via telefon eller e-post.');
+  }
+});
+  </script>
+
+
 </body>
 </html>
