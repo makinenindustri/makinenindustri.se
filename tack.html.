@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Tack för din förfrågan | Mäkinen Industri & Svets AB</title>
+</head>
+
+<body style="margin:0; background:#0b0b0b; color:white; font-family:Arial,sans-serif;">
+
+  <main style="max-width:700px; margin:auto; padding:100px 25px; text-align:center;">
+
+    <h1 style="font-size:42px; margin-bottom:20px;">
+      Tack för din förfrågan!
+    </h1>
+
+    <p style="font-size:20px; line-height:1.6; color:#d0d0d0;">
+      Vi har tagit emot din förfrågan och återkommer så snart som möjligt.
+    </p>
+
+    <p style="font-size:18px; margin-top:35px;">
+      Brådskande ärende?
+      <br><br>
+      <a href="tel:+46707822773"
+         style="color:#f39a24; font-weight:bold; text-decoration:none;">
+        Ring 070-782 27 73
+      </a>
+    </p>
+
+    <p style="margin-top:50px;">
+      <a href="/"
+         style="color:white;">
+        Tillbaka till startsidan
+      </a>
+    </p>
+
+  </main>
+
+</body>
+</html>
